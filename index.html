@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ashley's Graduation Celebration</title>
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    
+<!-- Material Symbols location icon -->
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_chip"
+/>
+
+</head>
+
+<body>
+
+    <header>
+        <p class="eyebrow">A SPECIAL MILESTONE</p>
+
+        <h1>Ashley's Grad Celebration</h1>
+
+        <p class="subtitle">
+            One journey ends. A beautiful new chapter begins.
+        </p>
+
+       
+   <div class="graduation-details">
+    <p>04 DECEMBER 2026</p>
+    <p>BSc Information Technology</p>
+
+    <p class="location">
+        <span class="material-symbols-outlined">
+            location_chip
+        </span>
+             Graduation Pavilion, Along Garissa Road
+    </p>
+    </div>
+
+
+        <button id="openInvitation">
+            Open Your Invitation
+        </button>
+    </header>
+
+    
+<main>
+    <section id="invitation" class="invitation-section">
+
+       <h2>You are Invited!</h2>
+
+    <p>
+        Please join me as I celebrate this special milestone
+    </p>
+
+    <div class="event-details">
+        <h3>🎓 Graduation Ceremony</h3>
+        <p>4 December 2026</p>
+        <p>Mount Kenya University</p>
+        <p>Graduation Pavilion, Along Garissa Road</p>
+    </div>
+
+    <div class="event-details">
+        <h3>🥂 Graduation Luncheon</h3>
+        <p>
+            Let's continue the celebration over good food
+            and beautiful company!
+        </p>
+        <p>Day, Venue and time to be announced.</p>
+    </div>
+
+          <form id="rsvpForm">
+
+                <label for="guestName">
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="guestName"
+                    name="guestName"
+                    placeholder="Enter your Name"
+                    required
+                >
+
+                <p class="form-question">
+                    Which event will you attend?
+                </p>
+
+                <label class="event-option">
+                    <input
+                        type="checkbox"
+                        name="event"
+                        value="CONVOCATION"
+                    >
+                    CONVOCATION
+                </label>
+
+                <label class="event-option">
+                    <input
+                        type="checkbox"
+                        name="event"
+                        value="Graduation Luncheon"
+                    >
+                    Graduation Luncheon
+                </label>
+
+                
+                <label for="attendance">
+                    Will you be attending?
+                </label>
+
+                <select id="attendance" name="attendance" required>
+                    <option value="">Choose your response</option>
+                    <option value="Yes">Yes, I'll be there!</option>
+                    <option value="No">Sorry, I can't make it :( </option>
+                </select>
+
+                <button type="submit">
+                    Send My RSVP
+                </button>
+
+            </form>
+
+            <p id="rsvpMessage"></p>
+
+        </div>
+
+    </section>
+</main>
+
+    <!-- Confetti animation library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<!-- My own JavaScript -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

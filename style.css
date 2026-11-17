@@ -1,0 +1,233 @@
+
+/* Lock the page before the invitation opens */
+body {
+    overflow: hidden;
+}
+
+/* The invitation stays hidden initially */
+#invitation {
+    display: none;
+}
+
+/* The invitation appears after unlocking */
+body.invitation-open {
+    overflow-y: auto;
+}
+
+body.invitation-open #invitation {
+    display: block;
+}
+
+/* Basic page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Palatino;
+    background-color: #fff7ed;
+    color: #572b19;
+}
+
+/* Main invitation area */
+header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #f4631b,
+        #c65d20,
+        #f5a044
+    );
+
+    color: white;
+}
+
+.eyebrow {
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(40px, 8vw, 76px);
+    max-width: 850px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.graduation-details {
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+button {
+    padding: 16px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #fff7ed;
+    color: #8a3415;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #fbd2a5;
+    transform: translateY(-3px);
+}
+
+.invitation-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.invitation-section h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.invitation-section p {
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.invitation-section h3 {
+    font-size: 28px;
+    color: #c65d20;
+}
+
+
+/* Location icon and venue */
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.material-symbols-outlined {
+    font-size: 26px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+/* Event information */
+.event-details {
+    margin: 40px auto;
+    padding: 25px;
+    max-width: 500px;
+    background-color: #ffedd5;
+    border-radius: 15px;
+}
+
+.event-details h3 {
+    color: #9a3412;
+    margin-bottom: 12px;
+}
+
+/* RSVP form */
+.rsvp-container {
+    max-width: 550px;
+    margin: 60px auto 0;
+    padding: 35px;
+    background-color: #fff1df;
+    border: 1px solid #f3c18b;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.rsvp-container h2 {
+    text-align: center;
+    color: #9a3412;
+}
+
+.rsvp-container > p {
+    text-align: center;
+}
+
+#rsvpForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#rsvpForm label,
+.form-question {
+    font-weight: bold;
+    color: #572b19;
+}
+
+#rsvpForm input[type="text"],
+#rsvpForm select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e5a36a;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+}
+
+.event-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.event-option input {
+    accent-color: #c65d20;
+    width: 18px;
+    height: 18px;
+}
+
+#rsvpForm button {
+    background-color: #9a3412;
+    color: white;
+    margin-top: 15px;
+}
+
+#rsvpForm button:hover {
+    background-color: #c65d20;
+}
+
+#rsvpMessage {
+    margin-top: 20px;
+    color: #9a3412;
+    font-weight: bold;
+}
+
+
+/* Button animation */
+#openInvitation {
+    transition: all 0.3s ease;
+}
+
+#openInvitation:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+#openInvitation:disabled {
+    opacity: 0.7;
+    cursor: default;
+    transform: none;
+}
